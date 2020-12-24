@@ -1,0 +1,4 @@
+---------------------------------------------------------------------------------------------------------------------------------------
+Number of times a local overheating consensus of nodes has occurred thus far 1
+Time of log: 2020-10-31 22:27:16 
+current interval of the program is: 5 seconds

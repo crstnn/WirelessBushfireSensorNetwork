@@ -1,0 +1,16 @@
+-----------------------------------------------FALSE REPORT --------------------------------------------------------------------------------------
+Alert Type: False
+False Alert Error: Satellite Report not up to data
+Iterations: 8
+Number of nodes compared with given sensor node: 2
+Time for receiving message from WSN: 47 millisecond
+Time of log: 2020-10-31 22:27:16 
+Local time (since the start of the program) when node in WSN reported local overheating consensus: 0.000000 seconds
+The satellite recorded a temperature reading of 93 at co-ordinate (0, 1)
+The satellite recorded this temperature at 50
+The node rank 1 at co-ordinate (0, 1) had a temperature reading of 90: 
+This sensor node's MAC is 27:5C:6:63:3A:FE
+This sensor node's IP is 235.158.166.255
+The up sensor node's MAC is 8F:64:32:E9:8A:54 and IP is 241.32.98.155 at co-ordinate (0, 0) with a temperature of 94 C
+The right sensor node's MAC is 67:FF:69:94:F7:60 and IP is 183.42.74.227 at co-ordinate (1, 1) with a temperature of 81 C
+Number of false reports thus far (inclusive): 1 & Number of confirmed reports thus far (inclusive): 0

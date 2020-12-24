@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#######
+#32 MPI processes on two compute nodes (i.e., a server cluster with 16 MPI processes on a singleserver).
+######
+#SBATCH --job-name=w6task3-mpi-10m-32c-2n
+
+### how much time, this job takes < one minute, we just put 30 mins
+#SBATCH --time=00:30:00
+
+### how much memory, 2 GB is plenty for this
+#SBATCH --mem=2000
+
+### how many processes in this job
+#SBATCH --ntasks=32
+#SBATCH --ntasks-per-node=16
+#SBATCH --cpus-per-task=1
+
+
+### account details
+#SBATCH --reservation=ece4179
+#SBATCH --partition=short
+
+module load openmpi/1.10.7-mlx
+mpirun ./mpi -n 10000000 -o mpi10m-2.txt
+
+exit 0
