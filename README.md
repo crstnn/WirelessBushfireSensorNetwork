@@ -3,6 +3,9 @@ Joint collaboration implemented in C using POSIX Threads and OpenMPI.
 A simulation of a WSN with sensors communicating with satellites in order 
 to detect bushfires within a particular area.
 
+![Network design layout (copyright-free image from
+https://unsplash.com/photos/er7EeL-4MqQ)](https://github.com/crstnn/WirelessBushfireSensorNetwork/blob/main/images/network_image.png)
+
 ### DESIGN SCHEME FOR SENSOR NETWORK
 We created a base station which always existed at the last rank on the MPI
 network, and wherein the sensor nodes took occupation of all the
