@@ -10,7 +10,7 @@ other ranks in the network. There are some strict specifications to
 the running of this program as the user specifies command line
 arguments of the cartesian grid that must follow an n * m form
 factor. Then, a master (base station) node must be specified. If an n
-* m + 1 nodes are not specified an informative error ensues and the
+\times m + 1 nodes are not specified an informative error ensues and the
 user must re-specify the parameters given the aforementioned
 schema.
 Another command line argument that is specified by the user is
