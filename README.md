@@ -1,9 +1,9 @@
-## Wireless Bushfire Sensor Network
+# Wireless Bushfire Sensor Network
 Joint collaboration implemented in C using POSIX Threads and OpenMPI. 
 A simulation of a WSN with sensors communicating with satellites in order 
 to detect bushfires within a particular area.
 
-# DESIGN SCHEME FOR SENSOR NETWORK
+### DESIGN SCHEME FOR SENSOR NETWORK
 We created a base station which always existed at the last rank on the MPI
 network, and wherein the sensor nodes took occupation of all the
 other ranks in the network. There are some strict specifications to
