@@ -13,6 +13,7 @@ factor. Then, a master (base station) node must be specified. If an n * m + 1
 nodes are not specified an informative error ensues and the
 user must re-specify the parameters given the aforementioned
 schema.
+
 Another command line argument that is specified by the user is
 it’s interval (in seconds). This allows the user to decide the
 network's polling frequency. This is an important feature as if a
@@ -21,7 +22,8 @@ connection it may rely on solar power or even solely battery power
 which could cause a fault in the entire network if the polling
 frequency were to be too often to completely diminish all its power
 resources.
-Also it should be noted that the user can specify the number of
+
+Also, it should be noted that the user can specify the number of
 iterations, in the command line arguments, that they would like the
 network to function for. Its total runtime can be calculated by
 multiplying the interval with the iterations argument.
