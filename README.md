@@ -47,3 +47,18 @@ packets are cross-checked with the satellite sensor to ensure no
 false positives. If the two temperatures match (from the satellite
 and the sensor nodes) then it is logged as a ‘confirmed report’ or
 otherwise a ‘false report’.
+
+### TERMINATION
+Sensor nodes create an IRecv message at the beginning of
+execution listening for a message tagged
+BASENODESHUTDOWN. Then, individually, as their final
+instruction - they will check to see if this message was received. If
+it is, they will run MPI_Finalize, simulating a shutdown.
+This form of shutdown, is a generally termed a 'graceful
+shutdown', as other processing is not interrupted and data/memory
+can be nicely cleaned-up. An ungraceful or forced shutdown could
+have been used in the situation where the responsiveness of the
+shutdown is critical. For example, if the WSN nodes were unable
+to be powered on in temperatures exceeding the threshold - forcing
+them to shutdown would do so immediately and potentially
+prevent the network from further damage.
