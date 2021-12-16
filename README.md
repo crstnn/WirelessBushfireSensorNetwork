@@ -1,6 +1,6 @@
 # Wireless Bushfire Sensor Network
 Joint collaboration implemented in C using POSIX Threads and OpenMPI. 
-A simulation of a WSN consensus algorithm utilising local sensors that communicate with 
+A simulation of a WSN consensus algorithm utilising sensors that communicate with 
 satellites in order to detect bushfires within a particular area.
 
 ![Network design layout (copyright-free image from
