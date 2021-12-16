@@ -6,7 +6,7 @@ satellites in order to detect bushfires within a particular area.
 ![Network design layout (copyright-free image from
 https://unsplash.com/photos/er7EeL-4MqQ)](https://github.com/crstnn/WirelessBushfireSensorNetwork/blob/main/images/network_image.png)
 
-### DESIGN SCHEME FOR SENSOR NETWORK
+### DESIGN SCHEMA FOR THE SENSOR NETWORK
 On initilisation, we create a base station which always exists at the last rank on the MPI
 network, and wherein the sensor nodes take occupation of all the
 other ranks in the network. There are some strict specifications to
