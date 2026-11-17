@@ -57,7 +57,10 @@ void *satelliteThreadFunc2(void *pArg)
         {
                 pthread_mutex_lock(&satellite_Mutex);
                 if (satellite_shutdown)
+                {
+                        pthread_mutex_unlock(&satellite_Mutex);
                         break;
+                }
                 int sat_curr_coord = randomNode(args->grid_size);
                 printf("sat thread curr node %d \n", sat_curr_coord);
                 satellite_reports[sat_curr_coord][0] = (double)randomTemp();
@@ -212,7 +215,9 @@ int base_station(int rank, int v_interval, int i_iterations, int n_rows, int m_c
                         {
                                 if (!isNodesAliveArr[i] || isSentinelFileShutdown == '1')
                                 {
+                                        pthread_mutex_lock(&satellite_Mutex);
                                         satellite_shutdown = 1;
+                                        pthread_mutex_unlock(&satellite_Mutex);
                                         printf("Master sending termination to child nodes. Terminated gracefully \n");
                                         fflush(stdout);
                                         // sending network termination message
@@ -294,6 +299,7 @@ int base_station(int rank, int v_interval, int i_iterations, int n_rows, int m_c
                                         int downR = getRow(adjR[1], m_cols), downC = getCol(adjR[1], m_cols);
                                         int leftR = getRow(adjR[2], m_cols), leftC = getCol(adjR[2], m_cols);
                                         int rightR = getRow(adjR[3], m_cols), rightC = getCol(adjR[3], m_cols);
+                                        free(adjR);
 
                                         pthread_mutex_lock(&satellite_Mutex);
                                         curr_satellite_temp = satellite_reports[MainRecReportMessage.nodeRank][0];
